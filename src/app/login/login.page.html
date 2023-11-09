@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- agregar botones u otros elementos aquí si es necesario --> 
+    </ion-buttons>
+
+  <ion-title class="ion-text-center">WELCOME</ion-title>
+    
+  <ion-buttons slot="end" >
+      <!-- agregar botones u otros elementos aquí si es necesario --> 
+      <div class="spinner">
+        <div class="spinnerin"></div>
+    </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-box">
+    <div class="user-box">
+      <input type="text" required>
+      <label>Correo</label>
+    </div>
+    <div class="user-box">
+      <input type="password" required>
+      <label>Contraseña</label>
+    </div>
+    <div class="ingreso">
+    <a href="#" (click)="login($event)">
+      <span></span>
+      <div class="login">Iniciar Sesión</div>
+    </a>
+  </div>
+  <div class="registro">
+    <a href="#" (click)="registro($event)">
+      <span></span>
+      <div class="Sign Up">Registrarme</div>
+    </a>
+  </div>
+</div>
+</ion-content>

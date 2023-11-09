@@ -1,0 +1,186 @@
+.ion-back-button {
+  display: flex;
+  position: absolute;
+  top: 10px; /* Ajusta según sea necesario */
+  left: 10px; /* Ajusta según sea necesario */
+}
+.ion-text-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw; /* Ajustado para adaptarse mejor a pantallas más pequeñas */
+  max-width: 400px;
+  padding: 80px;
+  transform: translate(-50%, -50%);
+  background: rgba(24, 20, 20, 0.987);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px; /* Ajustado para reducir el espacio entre elementos */
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+  justify-content: center;
+  align-items: center
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #bdb8b8;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center
+}
+
+.login-box a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  width: 200px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: .5s;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-box a:hover {
+  background: #03c8f4;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #03c8f4,
+              0 0 25px #03c8f4,
+              0 0 50px #03c8f4,
+              0 0 100px #03c8f4;
+          box-shadow: 0 0 5px #03c8f4,
+              0 0 25px #03c8f4,
+              0 0 50px #03c8f4,
+              0 0 100px #03c8f4;
+}
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,100% {
+    left: 100%;
+  }
+}
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,100% {
+    left: 100%;
+  }
+}
+.login-box a span:nth-child(1) {
+  bottom: 2px;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#03c8f4));
+  background: linear-gradient(90deg, transparent, #03c8f4);
+  -webkit-animation: btn-anim1 2s linear infinite;
+          animation: btn-anim1 2s linear infinite;
+}
+/*
+BOTON ANIMADO 1
+*/
+ion-buttons {
+  margin-right: 30px; /* Ajusta este valor según tus necesidades */
+}
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+  background: rgb(0, 0, 0);
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}
